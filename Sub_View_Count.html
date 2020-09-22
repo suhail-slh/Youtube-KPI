@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Live Count</title>
+        <link rel="stylesheet" href="odometer-theme-default.css" />
+        <script src="odometer.js"></script>
+        <script type="text/javascript" src='jquery-3.4.1.min.js'></script>
+    
+        <script type="text/javascript">
+
+            $(document).ready( function() {
+
+                var chanName = "";
+                
+
+                loadChannel("UC-lHJZR3Gqxm24_Vd_AJ5Yw");
+                function loadChannel(name) {
+
+                    var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&key=AIzaSyDaQiDhdJVRgr6qN4OmEgBgJU46Sywh77s';
+                    
+                    $.getJSON(url, function(data) {
+
+                        $('#odometer').html(data.items[0].statistics.subscriberCount); 
+
+                    });
+
+                }
+
+            });
+
+        </script>
+
+    </head>
+
+    <body>
+            <div id="odometer" class="odometer">0</div>
+    </body>
+</html>
