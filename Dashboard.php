@@ -83,7 +83,7 @@
 
                     });
 
-                    var url2 = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id='+name+'&key=AIzaSyCBUBSUWQE0dcebox6sJKlRg8TuuJ0rido';
+                    var url2 = 'https://www.googleapis.com/youtube/v3/channels?part=snippet&id='+name+'&key='; //insert API key
 
                     $.getJSON(url2, function(data) {
 
