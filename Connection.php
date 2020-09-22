@@ -7,7 +7,7 @@ $dataPoints4 = array();
 
 $servername = "localhost";
 $username = "root";
-$password = "@5cub3S?!";
+$password = "";
 $dbname = "db";
 
 // Create connection
