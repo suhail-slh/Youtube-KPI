@@ -72,7 +72,7 @@
 
                     chanName = name;
 
-                    var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&key=AIzaSyCBUBSUWQE0dcebox6sJKlRg8TuuJ0rido';
+                    var url = 'https://www.googleapis.com/youtube/v3/channels?part=statistics&id='+name+'&key='; //insert API key
 
                     $.getJSON(url, function(data) {
 
